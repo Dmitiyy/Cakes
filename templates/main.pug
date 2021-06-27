@@ -1,0 +1,71 @@
+extends document
+
+mixin card(img, title)
+    .chocolate__list-card 
+        img.chocolate__card-img(src=`./images/${img}.png`)
+        h2.chocolate__card-title #{title}
+        button.chocolate__card-btn More details
+
+mixin circle(path)
+    .popular__list-item(style=`background: url(./images/${path})`)
+
+block content 
+    .container 
+        nav.nav 
+            h1 TastyCake
+            ul.nav__wrap 
+                a(href="#cakes") 
+                    li Cakes
+                a(href="#popular")
+                    li Popular
+                a(href="#buy")
+                    li Buy
+            .burger 
+                .burger__item
+                .burger__item
+                .burger__item
+        ul.burger__menu  
+            a(href="#cakes") 
+                li Cakes
+            a(href="#popular")
+                li Popular
+            a(href="#buy")
+                li Buy
+        header.header 
+            .header__content 
+                .header__content-center 
+                    h2.header__content-title Tasty chocolate cake for you
+                    p.header__content-description You can receive any chocolate cake and have a good impressions
+                    a(href="#buy") 
+                        button.header__content-btn Buy now
+            div.header__img(style="background: url(./images/main.png)")
+        section.chocolate#cakes
+            h2.chocolate__title Chocolate cakes
+            .chocolate__list 
+                +card("first", "Chocolate Truffle Cake")
+                +card("second", "Chocolate Mocha Cake")
+                +card("third", "Chocolate Rum Cake")
+        section.popular#popular 
+            h2.popular__title Popular cakes
+            .popular__list 
+                +circle('pop_1.png')
+                +circle('pop_2.png')
+                +circle('pop_3.png')
+                +circle('pop_4.png')
+                +circle('pop_5.png')
+        section.contact#buy 
+            .contact__content
+                .contact__content-center 
+                    h2.contact__content-title Buy any chocolate cake immediately
+                    p.contact__content-description Write your email address and we will contact you soon 
+                    .contact__content-wrap 
+                        input.contact__content-input(type="text", placeholder="Email")
+                        button.contact__content-btn Send
+            .contact__photo 
+                .contact__photo-block 
+                .contact__photo-center 
+                    img.contact__photo-img(src="./images/contact.png")
+        footer.footer 
+            h1.footer__title TastyCake
+            p.footer__description © 2021 TastyCake - All rights reserved
+            a(href="https://www.instagram.com/daptellum.dev/", target="_blank") daptellum.dev

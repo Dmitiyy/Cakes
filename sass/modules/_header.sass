@@ -1,0 +1,53 @@
+.header
+    width: 100%
+    margin-top: 60px
+    height: 424px
+    display: flex
+    &__content
+        width: 50%
+        height: 100%
+        background: $mainColor
+        border-radius: 20px 0px 0px 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        &-center
+            width: 370px
+            height: 289px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            h2
+                font-weight: bold
+                font-size: 40px
+                color: white
+            p
+                font-weight: 400
+                font-size: 25px
+                color: white
+            a
+                width: 204px
+            button
+                width: 204px
+                height: 57px
+                background: white
+                border: none
+                outline: none
+                filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.25))
+                cursor: pointer
+                font-size: 25px
+                font-weight: bold
+                border-radius: 20px
+                margin-top: 10px
+                transition: all 0.3s
+                &:hover
+                    filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.25))
+                    background: black
+                    color: white
+    &__img
+        width: 50%
+        height: 100%
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        border-radius: 0 20px 20px 0

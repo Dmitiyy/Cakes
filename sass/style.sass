@@ -1,0 +1,43 @@
+$mainColor: #627E9A
+$btnColor: #D79E50
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    scroll-behavior: smooth
+
+body
+    font-family: 'Roboto', sans-serif
+
+.container
+    max-width: 1000px
+    margin: 0 auto
+    margin-top: 30px
+    margin-bottom: 30px
+
+@media ( max-width: 1032px ) and (min-width: 450px)
+    .container
+        width: 100%
+        padding-left: 30px
+        padding-right: 30px
+
+@media ( max-width: 449px ) and (min-width: 300px)
+    .container
+        width: 100%
+        padding-left: 10px
+        padding-right: 10px
+
+@import './modules/_nav.sass'
+@import './modules/_header.sass'
+@import './modules/_chocolate.sass'
+@import './modules/_popular.sass'
+@import './modules/_contact.sass'
+@import './modules/_footer.sass'
+
+@import './media/_media-nav.sass'
+@import './media/_media-header.sass'
+@import './media/_media-chocolate.sass'
+@import './media/_media-popular.sass'
+@import './media/_media-contact.sass'
+@import './media/_media-footer.sass'
